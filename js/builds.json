@@ -1,0 +1,102 @@
+[
+  {
+    "buildId": 1,
+    "image": "images/home-featured-01.png",
+    "title": "Edificio #1",
+    "for": [{
+      "type": "for_rent",
+      "label": "Alquiler"
+    }],
+    "city": "Lima"
+  },
+  {
+    "buildId": 2,
+    "image": "images/home-featured-02.png",
+    "title": "Edificio #2",
+    "for": [{
+      "type": "for_rent",
+      "label": "Alquiler"
+    }],
+    "city": "Lima"
+  },
+  {
+    "buildId": 3,
+    "image": "images/home-featured-03.png",
+    "title": "Edificio #3",
+    "for": [{
+      "type": "for_sale",
+      "label": "Venta"
+    }],
+    "city": "Lima"
+  },
+  {
+    "buildId": 4,
+    "image": "images/home-featured-04.png",
+    "title": "Edificio #4",
+    "for": [{
+      "type": "for_sale",
+      "label": "Venta"
+    }],
+    "city": "Lima"
+  },
+  {
+    "buildId": 5,
+    "image": "images/home-featured-05.png",
+    "title": "Edificio #5",
+    "for": [{
+      "type": "for_rent",
+      "label": "Alquiler"
+    }],
+    "city": "Lima"
+  },
+  {
+    "buildId": 6,
+    "image": "images/home-featured-06.png",
+    "title": "Edificio #6",
+    "for": [{
+      "type": "for_sale",
+      "label": "Venta"
+    }],
+    "city": "Lima"
+  },
+  {
+    "buildId": 7,
+    "image": "images/home-featured-01.png",
+    "title": "Edificio #7",
+    "for": [{
+      "type": "for_rent",
+      "label": "Alquiler"
+    }],
+    "city": "Arequipa"
+  },
+  {
+    "buildId": 8,
+    "image": "images/home-featured-02.png",
+    "title": "Edificio #8",
+    "for": [{
+      "type": "for_rent",
+      "label": "Alquiler"
+    }],
+    "city": "Lima"
+  },
+  {
+    "buildId": 9,
+    "image": "images/home-featured-03.png",
+    "title": "Edificio #9",
+    "for": [{
+      "type": "for_sale",
+      "label": "Venta"
+    }],
+    "city": "Lima"
+  },
+  {
+    "buildId": 10,
+    "image": "images/home-featured-04.png",
+    "title": "Edificio #10",
+    "for": [{
+      "type": "for_rent",
+      "label": "Alquiler"
+    }],
+    "city": "Arequipa"
+  }
+]

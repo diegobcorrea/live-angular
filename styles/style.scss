@@ -1,0 +1,419 @@
+/******************************************************************
+
+Site Name: AngularJS amqApp
+Code: Jozef Butko - jozefbutko.com/resume
+Date: Mar 2015
+
+******************************************************************/
+
+// normalize: http://necolas.github.io/normalize.css/
+@import "partials/normalize";
+
+// Sass variables
+@import "partials/variables";
+
+// Helpers
+@import "partials/helpers";
+
+// typography
+@import "partials/typography";
+
+// Sass functions
+@import "partials/functions";
+
+// import mixins
+@import "partials/mixins";
+
+// the grid
+@import "partials/grid";
+
+/*********************
+IMPORTING MODULES
+*********************/
+
+// alert boxes
+// @import "modules/alerts";
+
+// buttons
+// @import "modules/buttons";
+
+// forms (inputs & labels)
+// @import "modules/forms";
+
+/*********************
+BASE (MOBILE) SIZE
+*********************/
+
+// styles in base.scss
+@import "breakpoints/base";
+
+/*********************
+LARGER MOBILE DEVICES
+*********************/
+@media only screen and (min-width: 481px) {
+
+	// styles in 481up.scss
+	@import "breakpoints/481up";
+
+} // end of media query
+
+/*********************
+TABLET & SMALLER LAPTOPS
+*********************/
+@media only screen and (min-width: 768px) {
+
+	// styles in 768up.scss
+	@import "breakpoints/768up";
+
+} // end of media query
+
+/*********************
+DESKTOP
+*********************/
+@media only screen and (min-width: 1030px) {
+
+	// styles in 1030up.scss
+	@import "breakpoints/1030up";
+
+} // end of media query
+
+/*********************
+LARGE VIEWING SIZE
+*********************/
+@media only screen and (min-width: 1240px) {
+
+	// styles in 1240up.scss
+	@import "breakpoints/1240up";
+
+} // end of media query
+
+/*********************
+RETINA (2x RESOLUTION DEVICES)
+*********************/
+// @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+//        only screen and (min--moz-device-pixel-ratio: 1.5),
+//        only screen and (min-device-pixel-ratio: 1.5) {
+
+// 	// styles in 2x.scss
+// 	@import "breakpoints/2x";
+
+// } // end of media query
+
+/*********************
+PRINT STYLESHEET
+*********************/
+@media print {
+
+	// styles in print.scss
+	@import "partials/print";
+
+}
+
+$base-color: #666666;
+$secundary-color: #333333;
+
+@font-face {
+	font-family: 'AquawaxLight';
+	src: url('../fonts/AquawaxLightTrial.eot');
+	src: url('../fonts/AquawaxLightTrial.eot') format('embedded-opentype'),
+	url('../fonts/AquawaxLightTrial.woff2') format('woff2'),
+	url('../fonts/AquawaxLightTrial.woff') format('woff'),
+	url('../fonts/AquawaxLightTrial.ttf') format('truetype'),
+	url('../fonts/AquawaxLightTrial.svg#AquawaxLightTrial') format('svg');
+}
+
+
+*,
+*:after,
+*:before
+{
+	padding: 0;
+	margin: 0;
+	transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+	-moz-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+	-webkit-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+	-o-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+	-ms-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+html,
+body {
+	background-color: rgba(0,0,0,0);
+	font-size: 16px;
+}
+
+a {
+	display: block;
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: none;
+	}
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0 0 0 0;
+}
+
+.header {
+	background-color: rgba(255,255,255,1);
+	border-bottom: 1px solid #999999;
+	height: 110px;
+	z-index: 999;
+
+	&.affix,
+	&.affix-top {
+		top: 0;
+		width: 100%;
+	}
+}
+.affix + .ng-scope .container,
+.affix + .ng-scope .container-fluid,
+.affix + .container,
+.affix + .container-fluid  {
+	padding-top: 110px;
+}
+
+ul.navmenu {
+	float: right;
+	font-family: 'AquawaxLight';
+	font-size: 17px;
+	margin-top: 4.5em;
+	text-transform: uppercase;
+
+	li {
+		display: block;
+		float: left;
+		padding: 0 0.75em 0 0.75em;
+
+		a {
+			color: $base-color;
+		}
+	}
+}
+
+.register_cta {
+	font-family: 'AquawaxLight';
+	font-size: 17px;
+	text-transform: uppercase;
+	position: absolute;
+	right: 1.7em;
+	top: 0.75em;
+	a {
+		background-image: url("../images/header-register-icon.png");
+		background-repeat: no-repeat;
+		color: $base-color;
+		height: 1.5em;
+		line-height: 1.5em;
+		padding-left: 1.2em;
+	}
+}
+
+.bannerTop {
+	position: relative;
+	width: 100%;
+	.backstretch,
+	.backstretch img {
+		width: 100% !important;
+	}
+
+	.formSearch {
+		box-sizing: content-box;
+		height: 110px;
+		left: 50%;
+		padding: 21.66% 0 7.5%;
+		position: absolute;
+		transform: translate(-50%);
+		width: 60%;
+		z-index: 99;
+		.search-fields {
+			display: inline-block;
+			width: 100%;
+			input {
+				display: block;
+				float: left;
+				height: 50px;
+				margin-right: 0.25em;
+				padding: 0.25em 0.5em;
+				width: 75%;
+			}
+		}
+	}
+
+	.bannerText {
+		background-color: rgba(102,102,102,0.60);
+		background-image: url("../images/home-location-pin.png");
+		background-repeat: no-repeat;
+		background-position: 5% 50%;
+		bottom: 4.16%;
+		color: #FFFFFF;
+		font-family: 'AquawaxLight';
+		font-size: 60px;
+		height: 70px;
+		padding-left: 9.16%;
+		padding-right: 9.16%;
+		position: absolute;
+		text-transform: uppercase;
+		width: 100%;
+		z-index: 99;
+	}
+
+	.owl-theme {
+		.owl-item {
+			img {
+				padding: 0 !important;
+			}
+		}
+	}
+}
+
+.btn {
+	color: #FFFFFF;
+	display: block;
+	float: left;
+	font-family: 'AquawaxLight';
+	font-size: 20px;
+	height: 50px;
+	margin-bottom: 0.25em;
+	margin-right: 0.25em;
+	text-transform: uppercase;
+	width: 150px;
+	&.active,
+    &.btn-red {
+		background-color: rgb(228,35,32) !important;
+	}
+	&.btn-gray {
+		background-color: rgb(102,102,102);
+	}
+}
+
+.btn-publish {
+	display: inline-block;
+	padding: 1em 0;
+	width: 230px;
+	img {
+		width: 100%;
+	}
+}
+
+.featured {
+	padding-bottom: 2em;
+	padding-top: 2em;
+	h2 {
+		color: $base-color;
+		font-family: 'AquawaxLight';
+		font-size: 50px;
+	}
+	.items {
+		padding-top: 0.5em;
+		.item-featured {
+			padding-bottom: 2em;
+		}
+	}
+}
+
+.bigTile-home {
+	padding-top: 1em;
+	.banner-tile {
+		position: relative;
+		img {
+			width: 100%;
+		}
+		.banner-desc {
+			background-color: rgba(102,102,102,0.60);
+			background-image: url("../images/home-location-pin.png");
+			background-repeat: no-repeat;
+			background-position: 5% 15%;
+			color: #FFFFFF;
+			font-family: 'AquawaxLight';
+			font-size: 50px;
+			padding: 1rem 1rem 1rem 4rem;
+			position: absolute;
+			text-transform: uppercase;
+			width: 35%;
+			line-height: 50px;
+			top: 50%;
+			left: 2%;
+			transform: translateY(-50%);
+		}
+	}
+}
+.item-search {
+  float: left;
+  margin-bottom: 1%;
+  width: 49.5%;
+  &:nth-child(2n+1) {
+    margin-right: 1%;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.no-padding {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.small-padding {
+  padding-left: 0.5em !important;
+  padding-right: 0.5em !important;
+}
+.noTop {
+  padding-top: 0 !important;
+}
+
+.listBuilds {
+  box-shadow: -2px -1px 5px 0 rgba(0,0,0,.4);
+  display: block;
+  float: left;
+}
+
+.searchNav {
+  background-color: #e42320;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.4);
+  height: 50px;
+  .searchTabs {
+    float: left;
+    line-height: 50px;
+    position: relative;
+  }
+  .queryInput {
+    height: 34px;
+    background-color: #fff;
+    padding: 4px 6px 2px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    padding-right: 32px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 240px;
+  }
+  button.searchBtn {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    height: 34px;
+    background-color: transparent;
+    border: 0;
+    width: 2em;
+    line-height: 34px;
+  }
+}
+
+.footer {
+  background-color: $secundary-color;
+  height: 180px;
+}
+
+$break-small: 819px;
+$break-large: 820px;
+
+@media screen and (max-width: $break-small) {
+
+}
+
+@media screen and (min-width: $break-large) {
+
+}

@@ -1,0 +1,49 @@
+<div class="container-fluid">
+    <div class="row searchNav">
+        <div class="col-md-12">
+            <ul>
+                <li class="searchTabs">
+                    <input type="text" ng-model="query" class="queryInput">
+                    <button class="searchBtn">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </li>
+                <li class="searchTabs"></li>
+                <li class="searchTabs"></li>
+                <li class="searchTabs"></li>
+                <li class="searchTabs"></li>
+                <li class="searchTabs"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+
+        </div>
+        <div class="col-md-6 no-padding">
+            <div class="listBuilds small-padding">
+                <div class="titleBuilds">
+                    <h1>{{query}} - Listado de {{forTitle}}</h1>
+                    <small>{{filtered.length}} resultados</small>
+                </div>
+                <div ng-repeat="build in filtered = (builds | filter:query)" class="item-search">
+                    <a href="sea/{{build.buildId}}">
+                        <img ng-src="{{build.image}}" alt="{{build.title}}" >
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid bigTile-home noTop">
+    <div class="row">
+        <div class="banner-tile">
+            <img src="images/home-fluid-picture.jpg" />
+
+            <div class="banner-desc">
+                Lima Loft Tendencias
+            </div>
+        </div>
+    </div>
+</div>
