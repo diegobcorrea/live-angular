@@ -1,0 +1,1 @@
+!function(){function a(a,o){return{loadData:loadData}}angular.module("amqApp").factory("getDataFromAPI",a),a.$inject=["$http","LocalStorage"]}(),function(){function a(a,o){}angular.module("amqApp").controller("MainController",a),a.$inject=["LocalStorage","QueryService"]}();
